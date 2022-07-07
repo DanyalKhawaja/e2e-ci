@@ -1,1 +1,1 @@
-console.log("dev firefly exchnage not equality with cy dASH with actions2")
+console.log("dev firefly exchnage not equality not equal dadad")
