@@ -10,8 +10,7 @@ on:
 jobs:
   build:
 
-    runs-on: danyal-XPS-15-9500
+    runs-on: self-hosted
     steps:
     - uses: actions/checkout@v3
-    - run: cd ~/e2e-exchange-testing
-    - run: yarn test_local
+    - run: cd ~/e2e-exchange-testing && pwd && yarn test_local
