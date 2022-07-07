@@ -1,0 +1,21 @@
+{
+  "name": "e2e-ci",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanyalKhawaja/e2e-ci.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DanyalKhawaja/e2e-ci/issues"
+  },
+  "homepage": "https://github.com/DanyalKhawaja/e2e-ci#readme",
+  "dependencies": {}
+}
