@@ -13,5 +13,5 @@ jobs:
     runs-on: self-hosted
     steps:
     - uses: actions/checkout@v3
-    - run: cd ~/perpetual-ui && pwd && node index.js
+    - run: cd ~/E2E-CI && pwd && node index.js
     - run: cd ~/e2e-exchange-testing && pwd && yarn test_local
