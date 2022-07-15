@@ -5,7 +5,7 @@ name: e2e testing
 
 on:
   push:
-    branches: [ "dev" ]
+    branches: [ "main" ]
 
 jobs:
   build:
