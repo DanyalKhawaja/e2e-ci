@@ -4,8 +4,8 @@
 name: e2e testing
 
 on:
-  workflow_dispatch:
-    branches: [ "main" ]
+  push:
+    branches: [ "dev" ]
 
 jobs:
   build:
