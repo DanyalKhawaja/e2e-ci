@@ -19,6 +19,8 @@ jobs:
         run: |
           echo MY_SECRET="$MY_SECRET" > .env
           echo PAIR_NAME="$MY_SECRET" >> .env
+          echo PAIR_NAME1=${{ secrets.MY_SECRET }} >> .env
+          echo PAIR_NAME2="${{ secrets.MY_SECRET }}"" >> .env
       - name: run index.js
         run: node index.js
       - name: start testing
