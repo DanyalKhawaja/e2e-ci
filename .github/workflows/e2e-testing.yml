@@ -15,5 +15,11 @@ jobs:
     steps:
       # - uses: AutoModality/action-clean@v1
       - uses: actions/checkout@v3
-      - run: node index.js
-      - run: cd ~/e2e-exchange-testing && pwd && yarn skip_testing
+      - name: create .env
+        run: |
+          echo MY_SECRET=${{ secrets.MY_SECRET }} > .env
+          echo PAIR_NAME=${{ secrets.MY_SECRET }} >> .env
+      - name: run index.js
+        run: node index.js
+      - name: start testing
+        run: cd ~/e2e-exchange-testing && pwd && yarn skip_testing
