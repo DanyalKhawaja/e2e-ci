@@ -13,7 +13,7 @@ jobs:
       MY_SECRET: ${{ secrets.MY_SECRET }}
     runs-on: self-hosted
     steps:
-      # - uses: AutoModality/action-clean@v1
+      # - uses: AutoModality/action-clean@v1  DSFDSF
       - uses: actions/checkout@v3
       - name: create .env
         run: |
