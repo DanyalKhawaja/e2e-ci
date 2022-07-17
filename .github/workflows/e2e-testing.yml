@@ -16,6 +16,11 @@ jobs:
       - name: create .env
         run: |
           echo MY_SECRET=${{ secrets.MY_SECRET }} > .env
+      
+  build2:
+    needs: build
+    runs-on: self-hosted
+    steps:
       - name: run index.js
         run: node index.js
       - name: start testing
