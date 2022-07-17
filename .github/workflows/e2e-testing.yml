@@ -5,14 +5,23 @@ name: e2e testing
 
 on:
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
 
 jobs:
   build:
-
     runs-on: self-hosted
     steps:
-    # - uses: AutoModality/action-clean@v1
-    - uses: actions/checkout@v3
-    - run: node index.js
-    - run: cd ~/e2e-exchange-testing && pwd && yarn skip_testing
+      # - uses: AutoModality/action-clean@v1  DSFDSF
+      - uses: actions/checkout@v3
+      - name: create .env
+        run: |
+          echo MY_SECRET=${{ secrets.MY_SECRET }} > .env
+      
+  build2:
+    needs: build
+    runs-on: self-hosted
+    steps:
+      - name: run index.js
+        run: node index.js
+      - name: start testing
+        run: cd ~/e2e-exchange-testing && pwd && yarn skip_testing

@@ -17,5 +17,7 @@
     "url": "https://github.com/DanyalKhawaja/e2e-ci/issues"
   },
   "homepage": "https://github.com/DanyalKhawaja/e2e-ci#readme",
-  "dependencies": {}
+  "dependencies": {
+    "dotenv": "^16.0.1"
+  }
 }
